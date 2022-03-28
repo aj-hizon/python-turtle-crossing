@@ -14,7 +14,7 @@ class Player(Turtle):
         self.setheading(90)
         self.goto(STARTING_POSITION)
         
-    
+
     def go_to_start(self):
         self.goto(STARTING_POSITION)
 
