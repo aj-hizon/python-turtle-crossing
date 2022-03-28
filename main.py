@@ -11,6 +11,7 @@ screen.bgcolor("white")
 screen.tracer(0)
 
 timmy = Player()
+cars = CarManager()
 
 
 screen.listen()
@@ -19,6 +20,9 @@ screen.onkey(timmy.go_down, "Down")
 
 game_is_on = True
 while game_is_on:
-       time.sleep(0.1)
-       screen.update()
+	time.sleep(0.1)
+	screen.update()
+
+	cars.create_cars()
+	cars.move_cars()
 
