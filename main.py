@@ -12,6 +12,7 @@ screen.tracer(0)
 
 timmy = Player()
 cars = CarManager()
+scoreboard = Scoreboard()
 
 
 screen.listen()
@@ -26,3 +27,17 @@ while game_is_on:
 	cars.create_cars()
 	cars.move_cars()
 
+	# Detect collision with car
+	for car in cars.all_cars:
+		if car.distance(timmy) < 20:
+			game_is_on = False
+
+	# Detect succesful crossing
+	if timmy.is_at_finish_line():
+		timmy.go_to_start()
+		scoreboard.score_up()
+
+	
+
+
+screen.exitonclick()
