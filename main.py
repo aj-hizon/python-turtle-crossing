@@ -6,7 +6,16 @@ from scoreboard import Scoreboard
 
 screen = Screen()
 screen.setup(width=600, height=600)
+screen.bgcolor("gray")
 screen.tracer(0)
+
+timmy = Player()
+
+
+screen.listen()
+screen.onkey(fun= timmy.go_up, key="Up")
+screen.onkey(fun= timmy.go_down, key="Down")
+
 
 game_is_on = True 
 while game_is_on:
