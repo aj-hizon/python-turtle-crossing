@@ -1,4 +1,4 @@
-from turtle import Turtle, Screen
+from turtle import Turtle
 FONT = ("Arial", 15, "bold")
 BIG_FONT = ("Arial", 20, "bold")
 
