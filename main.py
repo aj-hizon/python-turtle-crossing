@@ -36,16 +36,6 @@ while game_is_on:
 		timmy.go_to_start()
 		scoreboard.score_up()
 
-	
-
 
 screen.exitonclick()
-a = 1
-def merong_tae():
-	if a == 1:
-		return True
-	else:
-		return False
 
-merong_tae()
-print(a)
